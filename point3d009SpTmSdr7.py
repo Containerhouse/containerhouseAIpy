@@ -37,7 +37,7 @@ from nupic.algorithms.sdr_classifier import SDRClassifier as SDR
 
 from pkg_resources import resource_filename
 from nupic.engine import Network
-from nupic.encoders import MultiEncoder, DeltaEncoder, ScalarEncoder, SDRCategoryEncoder
+from nupic.encoders import MultiEncoder, ScalarEncoder
 from nupic.data.file_record_stream import FileRecordStream
 
 _VERBOSITY = 0  # how chatty the demo should be
