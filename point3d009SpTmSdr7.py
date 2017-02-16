@@ -19,6 +19,11 @@
 # http://numenta.org/licenses/
 # ----------------------------------------------------------------------
 
+#We have adapted network_api_demo.py for our own research.
+#We are only using the SensorRegion from the Network API. Encoded data is being fed to the latest
+#spatial pooler, temporal memory, and SDR classifier algorithms. 
+#The sample data is our own and is generated from our SketchUp ruby extension.
+
 import copy
 import csv
 import json
