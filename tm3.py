@@ -169,11 +169,9 @@ def runNetwork(network, writer):
 
  for f in xrange(3):
   print "<>"
- print "prediction:" 
- print testDecodeAlt[0][0] #,testDecodeAlt[1][0],testDecodeAlt[2][0],testDecodeAlt[3][0],testDecodeAlt[4][0],testDecodeAlt[5][0],testDecodeAlt[6][0],testDecodeAlt[7][0],testDecodeAlt[8][0],testDecodeAlt[9][0],testDecodeAlt[10][0], testDecodeAlt[11][0] #testDecodeAlt
+ print("prediction: " + str(testDecodeAlt[0][0]))
  for g in xrange(3):
   print "<>"
- #writer.writerow((ii,testDecodeAlt[0][0],testDecodeAlt[1][0],testDecodeAlt[2][0],testDecodeAlt[3][0],testDecodeAlt[4][0],testDecodeAlt[5][0],testDecodeAlt[6][0],testDecodeAlt[7][0],testDecodeAlt[8][0],testDecodeAlt[9][0],testDecodeAlt[10][0], testDecodeAlt[11][0]))
 
 if __name__ == "__main__":
   
