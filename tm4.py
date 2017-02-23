@@ -59,36 +59,15 @@ tm = TM(columnDimensions = (2648,),
         )
 
 def createEncoder():
- #volume_encoder = ScalarEncoder(7, 0.0, 70.0, n=200, name="volume", clipInput=False, forced=True)
- #floorheight_encoder = ScalarEncoder(1, 0.0, 70.0, n=25, name="floorheight", clipInput=False, forced=True) 
 
-#257
  diagCoorA_encoder = ScalarEncoder(105, 0.0, 200.0, n=1324, name="diagCoorA", clipInput=False, forced=True)
  diagCoorB_encoder = ScalarEncoder(105, 0.0, 200.0, n=1324, name="diagCoorB", clipInput=False, forced=True)
- #diagCoorC_encoder = ScalarEncoder(157, 0.0, 200.0, n=2000, name="diagCoorC", clipInput=False, forced=True)
- #diagCoorD_encoder = ScalarEncoder(157, 0.0, 200.0, n=2000, name="diagCoorD", clipInput=False, forced=True)
- #diagCoorE_encoder = ScalarEncoder(157, 0.0, 200.0, n=2000, name="diagCoorE", clipInput=False, forced=True)
- #diagCoorF_encoder = ScalarEncoder(157, 0.0, 200.0, n=2000, name="diagCoorF", clipInput=False, forced=True)
- #diagCoorG_encoder = ScalarEncoder(157, 0.0, 200.0, n=2000, name="diagCoorG", clipInput=False, forced=True)
- #diagCoorH_encoder = ScalarEncoder(157, 0.0, 200.0, n=2000, name="diagCoorH", clipInput=False, forced=True)
- #diagCoorI_encoder = ScalarEncoder(157, 0.0, 200.0, n=2000, name="diagCoorI", clipInput=False, forced=True)
- #diagCoorJ_encoder = ScalarEncoder(157, 0.0, 200.0, n=2000, name="diagCoorJ", clipInput=False, forced=True) 
 
  global encoder 
  encoder = MultiEncoder()
  
- #encoder.addEncoder("volume", volume_encoder)
- #encoder.addEncoder("floorheight", floorheight_encoder)
  encoder.addEncoder("diagCoorA", diagCoorA_encoder)
  encoder.addEncoder("diagCoorB", diagCoorB_encoder)
- #encoder.addEncoder("diagCoorC", diagCoorC_encoder)
- #encoder.addEncoder("diagCoorD", diagCoorD_encoder)
- #encoder.addEncoder("diagCoorE", diagCoorE_encoder)
- #encoder.addEncoder("diagCoorF", diagCoorF_encoder)
- #encoder.addEncoder("diagCoorG", diagCoorG_encoder)
- #encoder.addEncoder("diagCoorH", diagCoorH_encoder)
- #encoder.addEncoder("diagCoorI", diagCoorI_encoder)
- #encoder.addEncoder("diagCoorJ", diagCoorJ_encoder)
 
  return encoder
 
