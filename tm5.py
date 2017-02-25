@@ -103,20 +103,20 @@ def runNetwork(network, writer):
  listCount = len(listDataOut)
 
  for j in xrange(listCount):
+
      num = int(j)
      mod = num % 2
      
      if mod == 0:
-      if j != listCount-1:
-       for k in xrange(100):
-        tm.compute(listDataOut[j], learn = True) 
-        tm.compute(listDataOut[j+1], learn = True) 
-      else:
-       None 
-      tm.reset()
 
-     else:
-      None
+       if j < listCount-2:
+
+        for k in xrange(100):
+
+         tm.compute(listDataOut[j], learn = True) 
+         tm.compute(listDataOut[j+1], learn = True) 
+
+         tm.reset()
 
  tm.compute(listDataOut[listCount-1], learn=False)
 
