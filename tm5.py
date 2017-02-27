@@ -84,21 +84,18 @@ def createNetwork(dataSource):
 def runNetwork(network, writer):
  
  sensorRegion = network.regions["sensor"]
+  
+ listDataOut = []
 
  for h in xrange(_NUM_RECORDS):
  
     network.run(1)
    
     testGV = sensorRegion.getOutputData("dataOut").nonzero()[0] 
+    listDataOut.append(testGV) 
+        
     src = sensorRegion.getOutputData("sourceOut")
-    
     print src
-
-    if h == 0:
-     listDataOut = []
-     listDataOut.insert(0,testGV)
-    else: 
-     listDataOut.append(testGV) 
 
  listCount = len(listDataOut)
 
