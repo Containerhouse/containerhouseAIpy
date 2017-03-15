@@ -1,29 +1,3 @@
-# ----------------------------------------------------------------------
-# Numenta Platform for Intelligent Computing (NuPIC)
-# Copyright (C) 2015-2016, Numenta, Inc.  Unless you have an agreement
-# with Numenta, Inc., for a separate license for this software code, the
-# following terms and conditions apply:
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero Public License version 3 as
-# published by the Free Software Foundation.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-# See the GNU Affero Public License for more details.
-#
-# You should have received a copy of the GNU Affero Public License
-# along with this program.  If not, see http://www.gnu.org/licenses.
-#
-# http://numenta.org/licenses/
-# ----------------------------------------------------------------------
-
-#We have adapted network_api_demo.py for our own research.
-#We are only using the SensorRegion from the Network API. Encoded data is being fed to the latest
-#spatial pooler, temporal memory, and SDR classifier algorithms. 
-#The sample data is our own and is generated from our SketchUp ruby extension.
-
 import copy
 import csv
 import json
@@ -114,11 +88,11 @@ def runNetwork(network, writer):
 
     src = sensorRegion.getOutputData("sourceOut")
     if h == 3:
-     print "<<<>>>"
-     print "should predict:"
+     printList = [] 
      for hSub in xrange(len(src)):
       if src[hSub] != 0.0:
-       print src[hSub]
+       printList.append(src[hSub])
+     print ("should predict: " + str(printList))
 
  listCount = len(listDataOut)
 
@@ -147,10 +121,12 @@ def runNetwork(network, writer):
 
  testDecodeAlt = encoder.topDownCompute(predArray)
 
- print "predictions:"
+ printListPred = []
  for l in xrange(len(testDecodeAlt)):
   if testDecodeAlt[l][0] != 0.0:
-   print testDecodeAlt[l][0] 
+   printListPred.append(round(testDecodeAlt[l][0],7))
+ print ("predictions: " + str(printListPred))
+
 
 if __name__ == "__main__":
   
