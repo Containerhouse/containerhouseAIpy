@@ -118,7 +118,7 @@ def runNetwork(network, writer):
      print "should predict:"
      for hSub in xrange(len(src)):
       if src[hSub] != 0.0:
-       print src[hSub] #+ str(src))
+       print src[hSub]
 
  listCount = len(listDataOut)
 
